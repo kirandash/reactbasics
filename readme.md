@@ -8,3 +8,9 @@ render is a React function while createElement is a JavaScript fn
 CDN links:
 https://fb.me/react-0.14.0.min.js
 https://fb.me/react-dom-0.14.0.min.js
+
+### 2. JSX(JavaScript as XML) Transformer
+
+https://unpkg.com/react@0.13.3/dist/JSXTransformer.js
+
+Transforms JavaScript XML into plain javascript on the browser and then renders it. (Can be checked in browser Elements tab, after loading the page)
