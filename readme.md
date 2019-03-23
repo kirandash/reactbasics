@@ -30,3 +30,6 @@ note that the component name must start with a capital letter
 After creating a component (BGComponent), in order to use them multiple times: please note that adjacent JSX elements must be wrapped in an enclosing tag. Ex:
 <div><BGComponent/><BGComponent/><BGComponent/></div>
 
+### 5. Setting and Getting Properties of a Component
+{this.props.variablename} - to get a variable data
+{this.props.children} - to get all the content from child
