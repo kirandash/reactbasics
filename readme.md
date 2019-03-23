@@ -8,4 +8,3 @@ render is a React function while createElement is a JavaScript fn
 CDN links:
 https://fb.me/react-0.14.0.min.js
 https://fb.me/react-dom-0.14.0.min.js
-
