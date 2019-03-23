@@ -3,8 +3,8 @@ var ToDo = React.createClass({displayName: "ToDo",
         return (
             React.createElement("div", {className: "todo"}, 
                 React.createElement("h3", null, this.props.children), 
-                React.createElement("button", {className: "btn btn-primary glyphicon glyphicon-pencil", onClick: this.edit}), 
-                React.createElement("button", {className: "btn btn-warning glyphicon glyphicon-trash", onClick: this.delete})
+                React.createElement("button", {className: "btn btn-primary glyphicon glyphicon-pencil", onClick: "{this.edit}"}), 
+                React.createElement("button", {className: "btn btn-warning glyphicon glyphicon-trash", onClick: "{this.delete}"})
             )
         )
     },
@@ -16,4 +16,4 @@ var ToDo = React.createClass({displayName: "ToDo",
     }
 });
 
-React.render(React.createElement(ToDo, null, "To do task"), document.getElementById('react-component'));
+React.render(React.createElement(ToDo, null, "To do list"), document.getElementById('react-component'));

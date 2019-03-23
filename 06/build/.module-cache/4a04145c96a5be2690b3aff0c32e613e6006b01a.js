@@ -16,4 +16,4 @@ var ToDo = React.createClass({displayName: "ToDo",
     }
 });
 
-React.render(React.createElement(ToDo, null, "To do task"), document.getElementById('react-component'));
+React.render(React.createElement(ToDo, null, "To do list"), document.getElementById('react-component'));

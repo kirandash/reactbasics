@@ -33,3 +33,6 @@ After creating a component (BGComponent), in order to use them multiple times: p
 ### 5. Setting and Getting Properties of a Component
 {this.props.variablename} - to get a variable data
 {this.props.children} - to get all the content from child
+
+### 6. Creating a To Do Application with React
+jsx js/ build/
