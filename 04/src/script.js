@@ -1,11 +1,8 @@
-var HelloWorld = React.createClass({
+var BGComponent = React.createClass({
     render: function() {
         return (
-            <div>
-                <h1>Kiran Kumar Dash</h1>
-                <p>UI Developer</p>
-            </div>
+            <div>This is a new react component.</div>
         );
     }
 });
-React.render(<HelloWorld/>, document.body);
+React.render(<div><BGComponent/><BGComponent/><BGComponent/></div>, document.getElementById('react-component'));

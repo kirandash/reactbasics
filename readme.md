@@ -24,3 +24,9 @@ Install react-tools: npm install -g react-tools
 cd into project folder and run the command: jsx src/ build/
 
 It will create a compiled js file in build folder and thus can be used in index.html file
+
+### 4. Creating a component
+note that the component name must start with a capital letter
+After creating a component (BGComponent), in order to use them multiple times: please note that adjacent JSX elements must be wrapped in an enclosing tag. Ex:
+<div><BGComponent/><BGComponent/><BGComponent/></div>
+
