@@ -2,7 +2,7 @@
 
 body,
 html,
-div.board,
+div.todo-list,
 div#react-container {
     height: 100%;
     overflow: hidden;
@@ -13,7 +13,7 @@ body {
     padding: 0;
 }
 
-div.board {
+div.todo-list {
     background-color: brown;
     width: 100%;
     background: #eab92d;

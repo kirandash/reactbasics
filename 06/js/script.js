@@ -44,4 +44,25 @@ var ToDo = React.createClass({
     }
 });
 
-React.render(<ToDo>To do task</ToDo>, document.getElementById('react-component'));
+// Create List of TO DO tasks
+var ToDoList = React.createClass({
+    propTypes: {
+        count: function(props, propName) {
+            if(typeof props[propName] !== "number") {
+                return new Error('The count property must be a number!');
+            }
+            if(props[propName] > 20) {
+                return new Error('You can not create ' + props[propName] + '. Since you have reached your limit of 20!');
+            }
+        }
+    },
+    render: function() {
+        return (
+            <div className="todo-list">
+                {this.props.count}
+            </div>
+        )
+    }
+});
+
+React.render(<ToDoList count={10}/>, document.getElementById('react-component'));

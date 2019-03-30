@@ -48,3 +48,6 @@ getInitialState, renderDefaultCard, renderForm
 ### 9. refs - To save value of textarea
 ref="savedText"
 var txt = this.refs.savedText.getDOMNode().value;
+
+### 10. propTypes - To handle validations and creating a to do list
+propTypes
