@@ -51,3 +51,6 @@ var txt = this.refs.savedText.getDOMNode().value;
 
 ### 10. propTypes - To handle validations and creating a to do list
 propTypes
+
+### 11. Setting Child elements of todo tasks inside todo list
+ToDoList > ToDo
