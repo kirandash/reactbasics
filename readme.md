@@ -44,3 +44,7 @@ getInitialState, onChange, defaultChecked
 
 ### 8. To Do App - Adding State - Initial, Edit and save
 getInitialState, renderDefaultCard, renderForm
+
+### 9. refs - To save value of textarea
+ref="savedText"
+var txt = this.refs.savedText.getDOMNode().value;

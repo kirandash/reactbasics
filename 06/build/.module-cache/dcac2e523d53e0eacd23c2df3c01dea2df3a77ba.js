@@ -35,7 +35,7 @@ var ToDo = React.createClass({displayName: "ToDo",
     },
     save: function() {
         console.log('Task saved');
-        var txt = this.refs.savedText.getDOMNode().value;
+        var txt = this.refs.newText.getDOMNode().value;
         console.log('The saved text is ' + txt);
         this.setState({editing: false});
     },
