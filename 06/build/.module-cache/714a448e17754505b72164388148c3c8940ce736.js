@@ -32,7 +32,6 @@ var ToDo = React.createClass({displayName: "ToDo",
         this.setState({editing: true});
     },
     save: function() {
-        console.log('Task saved');
         this.setState({editing: false});
     },
     delete: function() {

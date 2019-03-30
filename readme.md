@@ -41,3 +41,6 @@ Setting events:  onClick={this.edit}
 
 ### 7. Creating State
 getInitialState, onChange, defaultChecked
+
+### 8. To Do App - Adding State - Initial, Edit and save
+getInitialState, renderDefaultCard, renderForm
