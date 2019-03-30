@@ -54,3 +54,7 @@ propTypes
 
 ### 11. Setting Child elements of todo tasks inside todo list
 ToDoList > ToDo
+Note that child(todo) can inherit states from their parents(todolist)
+
+### 12. props - To edit and remove tasks
+this.props.onEdit
