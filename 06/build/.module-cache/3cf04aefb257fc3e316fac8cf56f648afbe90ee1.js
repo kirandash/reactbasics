@@ -1,4 +1,4 @@
-var ToDo = React.createClass({
+var ToDo = React.createClass({displayName: "ToDo",
     getInitialState: function(){
         // Allows us to set a default state for our node
         return {editing: false} // Initially we want the default card 
@@ -14,19 +14,19 @@ var ToDo = React.createClass({
     },
     renderDefaultCard: function() {
         return (
-            <div className="todo">
-                <h3>{this.props.children}</h3>
-                <button className="btn btn-primary glyphicon glyphicon-pencil" onClick={this.edit}></button>
-                <button className="btn btn-warning glyphicon glyphicon-trash" onClick={this.delete}></button>
-            </div>
+            React.createElement("div", {className: "todo"}, 
+                React.createElement("h3", null, this.props.children), 
+                React.createElement("button", {className: "btn btn-primary glyphicon glyphicon-pencil", onClick: this.edit}), 
+                React.createElement("button", {className: "btn btn-warning glyphicon glyphicon-trash", onClick: this.delete})
+            )
         )
     },
     renderForm: function() {
         return (
-            <div className="todo">
-                <textarea defaultValue={this.props.children} ref="savedText" className="form-control"></textarea>
-                <button className="btn btn-success btn-sm glyphicon glyphicon-floppy-disk" onClick={this.save}></button>
-            </div>
+            React.createElement("div", {className: "todo"}, 
+                React.createElement("textarea", {defaultValue: this.props.children, ref: "savedText", className: "form-control"}), 
+                React.createElement("button", {className: "btn btn-success btn-sm glyphicon glyphicon-floppy-disk", onClick: this.save})
+            )
         )
     },
     edit: function() {
@@ -47,7 +47,7 @@ var ToDo = React.createClass({
 });
 
 // Create List of TO DO tasks
-var ToDoList = React.createClass({
+var ToDoList = React.createClass({displayName: "ToDoList",
     propTypes: {
         count: function(props, propName) {
             if(typeof props[propName] !== "number") {
@@ -68,9 +68,9 @@ var ToDoList = React.createClass({
             ]
         }
     },
-    addToList: function(newText){
+    addToList: function(){
         var tasksArr = this.state.tasks;
-        tasksArr.push(newText); // Updating the item at i index
+        tasksArr.push(savedText); // Updating the item at i index
         this.setState({tasks: tasksArr}); // Updating the existing tasks list
     },
     editList: function(newText, i){
@@ -86,17 +86,17 @@ var ToDoList = React.createClass({
     eachTask: function(task, i){
         // Each tasks moved from render to a new function to keep render function simpler with less code
         return (
-            <ToDo key={i} index={i} onEdit={this.editList} onDelete={this.deleteFromList}>{task}</ToDo>
+            React.createElement(ToDo, {key: i, index: i, onEdit: this.editList, onDelete: this.deleteFromList}, task)
         );
     },
     render: function() {
         return (
-            <div className="todo-list">
-                {this.state.tasks.map(this.eachTask)}
-                <button className="btn btn-sm btn-success glyphicon glyphicon-plus" onClick={this.addToList.bind(null, "New Task")}></button> 
-            </div>
+            React.createElement("div", {className: "todo-list"}, 
+                this.state.tasks.map(this.eachTask), 
+                React.createElement("button", {className: "btn btn-sm btn-success glyphicon glyphicon-plus", onClick: this.addToList.bind(null, "New Task")})
+            )
         ) /* The bind event is to pass default placeholder for the first time we add a task */
     }
 });
 
-React.render(<ToDoList count={10}/>, document.getElementById('react-component'));
+React.render(React.createElement(ToDoList, {count: 10}), document.getElementById('react-component'));
