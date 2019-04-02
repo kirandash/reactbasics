@@ -80,3 +80,6 @@ componentDidMount
 
 3. Unmounting
 componentWillUnmount - will call right before component is unmounted. Helps in clearing DOMs, timers etc.
+
+### 16. Mounting Components
+componentWillMount, componentDidMount, unmountComponentAtNode

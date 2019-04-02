@@ -1,24 +1,21 @@
-var CheckBox = React.createClass({
-    getInitialState: function(){
-        return {checked: true}
-        // return {checked: false}
+var Box = React.createClass({
+    componentWillMount: function(){
+        console.log("component will be mounted next");
     },
-    handleCheck: function(){
-        this.setState({checked: !this.state.checked});
+    componentDidMount: function(){
+        console.log("component is already mounted");
     },
     render: function() {
-        var msg;
-        if(this.state.checked){
-            msg = "checked";
-        }else{
-            msg = "unchecked";
-        }
         return (
             <div>
-                <input type="checkbox" onChange={this.handleCheck} defaultChecked={this.state.checked}/>
-                <p>This box is {msg}</p>
             </div>
         );
     }
 });
-React.render(<CheckBox/>, document.getElementById('react-component'));
+React.render(<Box/>, document.getElementById('react-component'));
+
+var getRidOfBox = document.getElementsByTagName('div')[0];
+getRidOfBox.onclick = function(){
+    React.unmountComponentAtNode(document.body);
+    console.log("component is now fully unmounted");
+}

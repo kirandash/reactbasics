@@ -16,6 +16,6 @@ React.render(React.createElement(Box, null), document.getElementById('react-comp
 
 var getRidOfBox = document.getElementsByTagName('div')[0];
 getRidOfBox.onclick = function(){
-    React.unmountComponentAtNode(ReactDOM.findDOMNode(this).parentNode);
+    React.unmountComponentAtNode(document.body);
     console.log("component is now fully unmounted");
 }

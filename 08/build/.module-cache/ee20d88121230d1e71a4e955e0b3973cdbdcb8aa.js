@@ -13,9 +13,3 @@ var Box = React.createClass({displayName: "Box",
     }
 });
 React.render(React.createElement(Box, null), document.getElementById('react-component'));
-
-var getRidOfBox = document.getElementsByTagName('div')[0];
-getRidOfBox.onclick = function(){
-    React.unmountComponentAtNode(ReactDOM.findDOMNode(this).parentNode);
-    console.log("component is now fully unmounted");
-}
