@@ -62,3 +62,21 @@ this.props.onEdit
 ### 13. Add Task
 
 ### 14. Random Styling of tasks with the help of keys
+
+### 15. Component Life Cycle
+1. Mounting
+getDefaultProps - Called once for props
+getInitialState - Called once for states
+componentWillMount - Will call right before the render - last chance to modify the state before rendering
+render - last method called
+componentDidMount - called after succesful rendering of Component
+
+2. Updating
+componentWillReceiveProps
+shouldComponentUpdate
+componentWillUpdate
+render
+componentDidMount
+
+3. Unmounting
+componentWillUnmount - will call right before component is unmounted. Helps in clearing DOMs, timers etc.
