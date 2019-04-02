@@ -83,3 +83,7 @@ componentWillUnmount - will call right before component is unmounted. Helps in c
 
 ### 16. Mounting Components
 componentWillMount, componentDidMount, unmountComponentAtNode
+
+### 17. Setting properties with getDefaultProps
+getDefaultProps
+style={this.props}
