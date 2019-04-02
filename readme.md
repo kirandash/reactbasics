@@ -87,3 +87,7 @@ componentWillMount, componentDidMount, unmountComponentAtNode
 ### 17. Setting properties with getDefaultProps
 getDefaultProps
 style={this.props}
+
+### 18. Updating component
+componentWillReceiveProps - allows us to pass props to a component
+getInitialState & getDefaultProps
