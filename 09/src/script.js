@@ -5,9 +5,18 @@ var Box = React.createClass({
     componentDidMount: function(){
         console.log("component is already mounted");
     },
+    getDefaultProps: function(){
+        return {
+            backgroundColor: "blue",
+            height: 200,
+            width: 200
+        }
+    },
     render: function() {
         return (
             <div>
+                <div style={this.props}></div>
+                <section style={this.props}></section>
             </div>
         );
     }
