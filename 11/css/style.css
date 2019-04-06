@@ -1,18 +1,16 @@
-@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
-
 body,
 html,
 div.todo-list,
 div#react-container {
     height: 100%;
     overflow: hidden;
-    font-family: "Shadows Into Light", Arial;
 }
 
 body {
     margin: 0;
     padding: 0;
     background: #a52a2a;
+    font-family: cursive;
 }
 
 .app-title {
@@ -43,10 +41,9 @@ div.todo:active {
     cursor: -webkit-grabbing;
 }
 
-div.todo p {
-    font-size: 22px;
+div.todo h3 {
+    font-size: 20px;
     padding: 5px;
-    font-family: "Shadows Into Light", Arial;
 }
 
 div.todo:hover > span {
