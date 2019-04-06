@@ -100,3 +100,19 @@ http://baconipsum.com/api/?type=all-meat&sentences
 ### 20. Launching the TO DO application as Full stack app
 npm, package.json, CommonJS, httpster, react-tools
 
+### 21. Hosting the app with npm and httpster
+npm init in project folder
+
+npm install --save httpster (Light weight server)
+npm install --save react-tools (JSX Pre processing)
+
+package.json
+"scripts": {
+"start": "open http://localhost:9099 & httpster -p 9099"
+}
+
+Divide the files 
+and then run
+jsx js/ build/
+
+npm start

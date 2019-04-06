@@ -1,0 +1,25 @@
+{
+  "name": "todo-application",
+  "version": "1.0.0",
+  "description": "A to do applicatin powered with React.",
+  "main": "script.js",
+  "scripts": {
+    "start": "open http://localhost:9099 & httpster -p 9099"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirandash/reactbasics.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Kiran Dash",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kirandash/reactbasics/issues"
+  },
+  "homepage": "https://github.com/kirandash/reactbasics#readme",
+  "dependencies": {
+    "httpster": "^1.0.4"
+  }
+}
