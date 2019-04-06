@@ -97,3 +97,6 @@ $(this.getDOMNode()).draggable();
 
 http://baconipsum.com/api/?type=all-meat&sentences
 
+### 20. Launching the TO DO application as Full stack app
+npm, package.json, CommonJS, httpster, react-tools
+
