@@ -75,9 +75,13 @@ var ToDoList = React.createClass({displayName: "ToDoList",
         }
     },
     getInitialState: function(){
-        // Return empty tasks at load
         return {
-            tasks: []
+            tasks: [
+                {'id': 0, 'todo': 'Attend morning stand up calls'},
+                {'id': 1, 'todo': 'Push code to production'},
+                {'id': 2, 'todo': 'Attend evening meetings'},
+                {'id': 3, 'todo': 'Go Gym'}
+            ]
         }
     },
     incrementId: function() {

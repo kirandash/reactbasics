@@ -7,9 +7,13 @@ var ToDo = React.createClass({
         // A react fn that triggers right before the first render
         this.style = {
             right: this.randomNumber(0, window.innerWidth - 250 ) + 'px',
-            top: this.randomNumber(0, window.innderHeight - 250 ) + 'px', // 250 = 200 height + margin on both sides of 25
+            top: this.randomNumber(50, window.innerHeight - 300 ) + 'px', // 250 = 200 height + margin on both sides of 25, additional 50 because of the title at top right corner
             transform: 'rotate(' + this.randomNumber(-15, 15) + 'deg)'
         };
+    },
+    componentDidMount: function(){
+        // Immediately after our component is rendered - Create draggable items of todo with jQuery UI
+        $(this.getDOMNode()).draggable();
     },
     randomNumber: function(min, max){
         // Generate a random number between min and max
@@ -71,18 +75,26 @@ var ToDoList = React.createClass({
         }
     },
     getInitialState: function(){
+        // Return empty tasks at load
         return {
-            tasks: [
-                {'id': 0, 'todo': 'Attend morning stand up calls'},
-                {'id': 1, 'todo': 'Push code to production'},
-                {'id': 2, 'todo': 'Attend evening meetings'},
-                {'id': 3, 'todo': 'Go Gym'}
-            ]
+            tasks: []
         }
     },
     incrementId: function() {
         this.id  = this.id || 3;
         return this.id++;
+    },
+    componentWillMount: function(){
+        var self = this;
+        if(this.props.count){
+            // jQuery getJSON to get JSON from an api
+            $.getJSON("http://baconipsum.com/api/?type=all-meat&sentences=" + this.props.count + "&start-with-lorem=1&callback=?", function(results){
+                // Callback fn
+                results[0].split('. ').forEach(function(sentence){
+                    self.addToList(sentence.substring(0, 40));
+                })
+            });
+        }
     },
     addToList: function(newText){
         var tasksArr = this.state.tasks;
@@ -118,4 +130,4 @@ var ToDoList = React.createClass({
     }
 });
 
-React.render(<ToDoList count={10}/>, document.getElementById('react-component'));
+React.render(<ToDoList count={50}/>, document.getElementById('react-component'));

@@ -6,11 +6,19 @@ div.todo-list,
 div#react-container {
     height: 100%;
     overflow: hidden;
+    font-family: "Shadows Into Light", Arial;
 }
 
 body {
     margin: 0;
     padding: 0;
+}
+
+.app-title {
+    background: #8d0db7;
+    margin: 0;
+    padding: 10px;
+    color: white;
 }
 
 div.todo-list {

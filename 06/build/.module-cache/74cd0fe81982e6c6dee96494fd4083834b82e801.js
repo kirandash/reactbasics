@@ -7,7 +7,7 @@ var ToDo = React.createClass({displayName: "ToDo",
         // A react fn that triggers right before the first render
         this.style = {
             right: this.randomNumber(0, window.innerWidth - 250 ) + 'px',
-            top: this.randomNumber(50, window.innerHeight - 300 ) + 'px', // 250 = 200 height + margin on both sides of 25, additional 50 because of the title at top right corner
+            top: this.randomNumber(0, window.innderHeight - 250 ) + 'px', // 250 = 200 height + margin on both sides of 25
             transform: 'rotate(' + this.randomNumber(-15, 15) + 'deg)'
         };
     },
@@ -75,9 +75,13 @@ var ToDoList = React.createClass({displayName: "ToDoList",
         }
     },
     getInitialState: function(){
-        // Return empty tasks at load
         return {
-            tasks: []
+            tasks: [
+                {'id': 0, 'todo': 'Attend morning stand up calls'},
+                {'id': 1, 'todo': 'Push code to production'},
+                {'id': 2, 'todo': 'Attend evening meetings'},
+                {'id': 3, 'todo': 'Go Gym'}
+            ]
         }
     },
     incrementId: function() {

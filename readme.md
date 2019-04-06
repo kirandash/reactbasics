@@ -91,3 +91,9 @@ style={this.props}
 ### 18. Updating component
 componentWillReceiveProps - allows us to pass props to a component
 getInitialState & getDefaultProps
+
+### 19. Creating draggable tasks and default todo tasks
+$(this.getDOMNode()).draggable();
+
+http://baconipsum.com/api/?type=all-meat&sentences
+
